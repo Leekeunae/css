@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform01</title>
+    <style>
+        .flag{
+            width:100px;
+            height:100px;
+            margin:0 auto;
+            background:red; 
+            text-align:center;
+            line-height:100px;           
+        }
+        .box{
+            width:100px;
+            height:100px;
+            margin:100px auto;
+            background:red;
+            /* 크기변환 */
+            transform:scaleX(1.5);
+            transform:scaleY(2);
+            transform:scale(1.5,2);
+            transform:scale(2);
+            /* 이동 */
+            transform:translateX(200px);
+            transform:translateX(-200px);
+            transform:translateY(100px);
+            transform:translateY(-100px);
+            transform:translate(200px,100px);
+            transform:translate(100px);
+
+            transform:scale(200%,100%);
+            transform:translate(0,200px);
+        }
+        .container{
+            width:500px;
+            height:500px;
+            margin:400px auto;
+            border:2px solid black;
+            position:relative;
+        }
+        .container div{
+            width:100px;
+            height:100px;
+            background:lightcoral;
+            position:absolute;
+            left:50%;
+            bottom:0;
+            transform:translate(-50%,0);
+        }
+    </style>
+</head>
+<body>
+    <div class="flag">기준</div>
+    <div class="box"></div>
+    <div class="container">
+        <div></div>
+    </div>
+</body>
+</html>

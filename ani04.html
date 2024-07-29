@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes rotate30 {
+            0%{transform:rotate(-30deg);}
+            100%{transform:rotate(30deg);}
+        }
+        @keyframes move20{
+            0%{top:0px;}
+            100%{top:-20px;}
+        }
+
+        .box{
+            width:100px;
+            height:120px;
+            margin:0 auto;
+            border-radius:50%;
+            background:red;
+            transform:rotate(-30deg);
+            transform-origin:50% 100%;
+            animation:rotate30 1.5s ease-in-out infinite alternate;
+        }
+        span{
+            margin:0 50px;
+            font-size:2em;
+            position:relative;
+            top:0px;
+            animation:move20 1s ease-in-out infinite alternate;
+        }
+        .span02{
+            animation-delay:0.25s;
+        }
+        .span03{
+            animation-delay:0.5s;
+        }
+        .span04{
+            animation-delay:0.75s;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <span class="span01">ABOUT ME</span>
+    <span class="span02">SKILLS</span>
+    <span class="span03">PORTFOLIO</span>
+    <span class="span04">CONTACT US</span>
+</body>
+</html>
